@@ -23,8 +23,57 @@ function CartProvider({ children }) {
   }, [cart]);
 
   const addToCart = (product) => {
-    setCart([...cart, product]);
-  };
+  const existingProduct = cart.find(
+    (item) => item._id === product._id
+  );
+
+  if (existingProduct) {
+    setCart(
+      cart.map((item) =>
+        item._id === product._id
+          ? {
+              ...item,
+              quantity: item.quantity + 1,
+            }
+          : item
+      )
+    );
+  } else {
+    setCart([
+      ...cart,
+      {
+        ...product,
+        quantity: 1,
+      },
+    ]);
+  }
+};
+
+  const increaseQuantity = (id) => {
+  setCart(
+    cart.map((item) =>
+      item._id === id
+        ? {
+            ...item,
+            quantity: item.quantity + 1,
+          }
+        : item
+    )
+  );
+};
+
+const decreaseQuantity = (id) => {
+  setCart(
+    cart.map((item) =>
+      item._id === id
+        ? {
+            ...item,
+            quantity: item.quantity - 1,
+          }
+        : item
+    ).filter((item) => item.quantity > 0)
+  );
+};
 
   const removeFromCart = (id) => {
     setCart(
@@ -34,12 +83,20 @@ function CartProvider({ children }) {
     );
   };
 
+  const clearCart = () => {
+  setCart([]);
+  };
+
+
   return (
     <CartContext.Provider
       value={{
         cart,
         addToCart,
         removeFromCart,
+        clearCart,
+        increaseQuantity,
+        decreaseQuantity,
       }}
     >
       {children}

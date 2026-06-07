@@ -31,6 +31,17 @@ function Navbar() {
           Cart ({cart.length})
         </Link>
 
+        <Link to="/orders"
+         className="nav-link">
+          Orders
+         </Link>
+        
+        <Link
+          to="/profile"
+          style={{color: "white",textDecoration: "none",}}>
+          Profile
+        </Link>
+
         {token && user && (
           <span
             style={{
