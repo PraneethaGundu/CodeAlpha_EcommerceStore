@@ -1,107 +1,89 @@
-# ShopEase - E-Commerce Store
+# 🛒 ShopEase - MERN E-Commerce Store
 
-A full-stack E-Commerce web application built using React, Node.js, Express.js, and MongoDB Atlas.
+A full-stack E-Commerce web application built as part of the CodeAlpha Full Stack Development Internship.
 
-## Features
+This application allows users to register, log in, browse products, view product details, add products to a shopping cart, place orders, and view their order history.
 
+---
+
+## 🚀 Features
+
+### 👤 User Authentication
 - User Registration
-- User Login & Logout
+- User Login
 - JWT Authentication
+- Protected Routes
+- Logout Functionality
+
+### 🛍 Product Management
 - Product Listing
 - Product Search
 - Product Details Page
+- Product Images
+- Responsive Product Cards
+
+### 🛒 Shopping Cart
 - Add to Cart
 - Remove from Cart
-- Persistent Cart using Local Storage
-- Dynamic Cart Counter
-- Welcome User Display
+- Increase Quantity
+- Decrease Quantity
+- Dynamic Cart Count
+- Total Price Calculation
 
-## Tech Stack
+### 📦 Order Management
+- Checkout Functionality
+- Order Processing
+- Order Success Page
+- Order History Page
+- MongoDB Order Storage
+
+### 👤 User Profile
+- Profile Page
+- User Information Display
+
+---
+
+## 🏗 Tech Stack
 
 ### Frontend
-- React
-- Vite
+- React.js
 - React Router DOM
 - Axios
-- Context API
+- CSS3
+- Vite
 
 ### Backend
 - Node.js
 - Express.js
+
+### Database
 - MongoDB Atlas
 - Mongoose
-- JWT Authentication
-- bcryptjs
-
-## Project Structure
-
-```text
-CodeAlpha_EcommerceStore/
-│
-├── frontend/
-│   ├── src/
-│   ├── public/
-│   └── package.json
-│
-├── backend/
-│   ├── config/
-│   ├── models/
-│   ├── routes/
-│   ├── middleware/
-│   ├── server.js
-│   └── package.json
-│
-└── README.md
-```
-
-## Installation
-
-### Frontend
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-### Backend
-
-```bash
-cd backend
-npm install
-npm run dev
-```
-
-## Environment Variables
-
-Create a `.env` file inside the backend folder:
-
-```env
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
-```
-
-## API Routes
 
 ### Authentication
+- JSON Web Token (JWT)
+- bcryptjs
 
-```http
-POST /api/auth/register
-POST /api/auth/login
-```
+---
 
-### Products
+## 📂 Project Structure
 
-```http
-GET /api/products
-GET /api/products/:id
-```
-
-## Author
-
-**Gundu Praneetha**
-
-Computer Science Student | Exploring Technology & Innovation
-
-Email: praneetha1435@gmail.com
+```text
+CodeAlpha_EcommerceStore
+│
+├── frontend
+│   ├── src
+│   │   ├── components
+│   │   ├── pages
+│   │   ├── context
+│   │   └── api
+│   │
+│   └── public
+│
+├── backend
+│   ├── models
+│   ├── routes
+│   ├── middleware
+│   └── config
+│
+└── README.md
