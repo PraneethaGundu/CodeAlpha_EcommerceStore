@@ -4,17 +4,39 @@ A full-stack E-Commerce web application built using React, Node.js, Express.js, 
 
 ## Features
 
+### Authentication
 - User Registration
 - User Login & Logout
 - JWT Authentication
+- Protected Routes
+- Welcome User Display
+
+### Products
 - Product Listing
 - Product Search
 - Product Details Page
+- Product Images
+
+### Shopping Cart
 - Add to Cart
 - Remove from Cart
-- Persistent Cart using Local Storage
+- Increase Quantity
+- Decrease Quantity
 - Dynamic Cart Counter
-- Welcome User Display
+- Dynamic Total Price
+- Persistent Cart using Local Storage
+
+### Orders
+- Order Processing
+- Checkout Functionality
+- Order Success Page
+- Order History Page
+- Order Status Tracking
+
+### User
+- User Profile Page
+
+---
 
 ## Tech Stack
 
@@ -24,6 +46,7 @@ A full-stack E-Commerce web application built using React, Node.js, Express.js, 
 - React Router DOM
 - Axios
 - Context API
+- CSS3
 
 ### Backend
 - Node.js
@@ -32,6 +55,8 @@ A full-stack E-Commerce web application built using React, Node.js, Express.js, 
 - Mongoose
 - JWT Authentication
 - bcryptjs
+
+---
 
 ## Project Structure
 
@@ -72,6 +97,8 @@ npm install
 npm run dev
 ```
 
+---
+
 ## Environment Variables
 
 Create a `.env` file inside the backend folder:
@@ -81,6 +108,8 @@ PORT=5000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_secret_key
 ```
+
+---
 
 ## API Routes
 
@@ -98,10 +127,45 @@ GET /api/products
 GET /api/products/:id
 ```
 
+### Orders
+
+```http
+POST /api/orders
+GET /api/orders/:userId
+```
+
+---
+
+## CodeAlpha Task Coverage
+
+### Task 1: Simple E-Commerce Store
+
+Implemented Features:
+
+- ✅ Shopping Cart
+- ✅ Product Details Page
+- ✅ Order Processing
+- ✅ User Registration/Login
+- ✅ Database Integration
+- ✅ Quantity Management
+- ✅ Order History
+- ✅ User Profile
+- ✅ Protected Routes
+
+---
+
 ## Author
 
-**Gundu Praneetha**
+### Gundu Praneetha
 
 Computer Science Student | Exploring Technology & Innovation
 
-Email: praneetha1435@gmail.com
+📧 Email: praneetha1435@gmail.com
+
+🔗 GitHub: https://github.com/PraneethaGundu
+
+---
+
+## License
+
+This project was developed as part of the CodeAlpha Full Stack Development Internship Program.
